@@ -1,0 +1,34 @@
+{
+  "name": "kin-relay-server",
+  "version": "1.0.0",
+  "description": "Production relay server for Kin - Family Photos app",
+  "main": "relay-server-production.js",
+  "scripts": {
+    "start": "NODE_ENV=production node relay-server-production.js",
+    "dev": "nodemon relay-server-production.js",
+    "test": "node test-server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "helmet": "^7.1.0",
+    "express-rate-limit": "^7.1.5",
+    "compression": "^1.7.4"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "relay",
+    "family",
+    "photos",
+    "private",
+    "sharing"
+  ],
+  "author": "Anthony - Antomic Tech",
+  "license": "UNLICENSED",
+  "private": true
+}
