@@ -1,0 +1,22 @@
+# Railway deployment configuration for Kin Relay Server
+
+# Build settings
+[build]
+  builder = "NIXPACKS"
+  buildCommand = "npm install"
+
+# Start command
+[deploy]
+  startCommand = "npm start"
+  restartPolicyType = "ON_FAILURE"
+  restartPolicyMaxRetries = 10
+
+# Health check
+[healthcheck]
+  path = "/health"
+  interval = 30
+  timeout = 10
+
+# Environment
+[env]
+  NODE_ENV = "production"
